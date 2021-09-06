@@ -13,6 +13,7 @@ public class JedisTest {
     @Before
     public void init(){
         jedis = new Jedis("192.168.124.71",6379);
+        //如果报错的话  config set requirepass 123456
         jedis.auth("123456");
         //心跳机制
         String ping = jedis.ping();
